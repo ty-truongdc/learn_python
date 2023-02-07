@@ -1,35 +1,40 @@
-#Creating a class called Restaurant   """*5\\ttempt to create simple class"""
+#Re do restaurant.py for sake of practice.
+#Create Restaurant class
+
 class Restaurant:
-    def __init__(self, restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
-
-    def describe_restaurant(self):
-        print(restaurant_name, cuisine_type)
-
-    def open_restaurant(self):
-        print(f"{self.restaurant_name} is now open.")
-		
-class IceCreamStand(Restaurant):
-	"""Attempt to create a child class"""
+	"""Attempt to create a class named Restaurant"""
 	def __init__(self, restaurant_name, cuisine_type):
-		super().__init__(restaurant_name, cuisine_type)
+		self.restaurant_name = restaurant_name
+		self.cuisine_type = cuisine_type
 		
-	def display_flavor(self, flavor):
-		print("Available flavor are:")
-		for i in flavor:
-			print(i.title(), end = " ")	
+	#Make a method to print out the above information
+	
+	def describe_restaurant(self):
+		print(f"The restaurant name is {self.restaurant_name} and we serve {self.cuisine_type}.")
+		
+	#Make another method to print a message that the restaurant is open.
+	
+	def open_restaurant(self):
+		print(f"{self.restaurant_name} is open.")
+		
+#Make an instance called restaurant.
 
-my_restaurant = Restaurant("Asian King", "Chinese Cuisine")
-print(f"Restaurant name is: {my_restaurant.restaurant_name} and we serve {my_restaurant.cuisine_type}")
-my_restaurant.open_restaurant()
+restaurant = Restaurant("cava".title(), "mexican cuisine".title())
 
+#Call the two above methods.
 
-ice_cream_flavor_list = ['strawberries', 'vanilla', 'blueberries', 'chocolate']		
-my_icream_stand = IceCreamStand(ice_cream_flavor_list)
-my_icream_stand = IceCreamStand('Luna', 'Viet Flavor')
-my_icream_stand = Restaurant("Ice Cold", "Sweet")
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
 
+#Make two more instances (two more restaurants).
 
-print(my_icream_stand.describe_restaurant())
-my_icream_stand.display_flavor(ice_cream_flavor_list)
+second_restaurant = Restaurant("chipotle".title(), "local mexican cuisine".title())
+third_restaurant = Restaurant("huong viet".title(), "vietnamese food".title())
+
+#Call the above two methods again:
+
+second_restaurant.describe_restaurant()
+second_restaurant.open_restaurant()
+
+third_restaurant.describe_restaurant()
+third_restaurant.open_restaurant()
