@@ -1,0 +1,5 @@
+In python, you can read a file and print it out
+by 
+1. print out the whole content
+2. print out line by line by looping
+3. print content outside of the with block by saving file object to a variable and use it outside of the with block.
